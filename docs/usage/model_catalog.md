@@ -246,7 +246,7 @@ Languages are given as BCP-47 tags for every engine; see
 | `granite_docling` | Granite-Docling-258M | 258M | ✅ | ✅ | Ollama | ❌ | DocTags |
 | `smoldocling` | SmolDocling-256M | 256M | ✅ | ✅ | ❌ | ❌ | DocTags |
 | `deepseek_ocr` | DeepSeek-OCR-3B | 3B | ❌ | ❌ | Ollama<br/>LM Studio | ❌ | Markdown |
-| `granite_vision` | Granite-Vision-3.3-2B | 2B | ✅ | ❌ | Ollama<br/>LM Studio | ✅ | Markdown |
+| `granite_vision` | Granite-Vision-4.1-4B | 4B | ✅ | ❌ | Ollama<br/>LM Studio | ✅ | Markdown |
 | `pixtral` | Pixtral-12B | 12B | ✅ | ✅ | ❌ | ❌ | Markdown |
 | `got_ocr` | GOT-OCR-2.0 | - | ✅ | ❌ | ❌ | ❌ | Markdown |
 | `phi4` | Phi-4-Multimodal | - | ✅ | ❌ | ❌ | ✅ | Markdown |
@@ -462,7 +462,7 @@ organizations under USD 5M funding or revenue. Read the model card before commer
 | Preset ID | Model | Parameters | Transformers | MLX | API (OpenAI-compatible) | vLLM |
 |-----------|-------|------------|--------------|-----|-------------------------|------|
 | `smolvlm` | SmolVLM-256M | 256M | ✅ | ✅ | LM Studio | ❌ |
-| `granite_vision` | Granite-Vision-3.3-2B | 2B | ✅ | ❌ | Ollama<br/>LM Studio | ✅ |
+| `granite_vision` | Granite-Vision-4.1-4B | 4B | ✅ | ❌ | Ollama<br/>LM Studio | ✅ |
 | `pixtral` | Pixtral-12B | 12B | ✅ | ✅ | ❌ | ❌ |
 | `qwen` | Qwen2.5-VL-3B | 3B | ✅ | ✅ | ❌ | ❌ |
 
