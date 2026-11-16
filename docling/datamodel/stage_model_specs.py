@@ -984,8 +984,8 @@ PIXTRAL_MODEL_SPEC_BASE = {
 
 # Shared Granite Vision model spec used across VLM_CONVERT and PICTURE_DESCRIPTION stages
 GRANITE_VISION_MODEL_SPEC_BASE = {
-    "name": "Granite-Vision-3.3-2B",
-    "default_repo_id": "ibm-granite/granite-vision-3.3-2b",
+    "name": "Granite-Vision-4.1-4B",
+    "default_repo_id": "ibm-granite/granite-vision-4.1-4b",
     "supported_engines": {
         VlmEngineType.TRANSFORMERS,
         VlmEngineType.VLLM,
@@ -1000,8 +1000,11 @@ GRANITE_VISION_MODEL_SPEC_BASE = {
         ),
     },
     "api_overrides": {
+        VlmEngineType.API_LMSTUDIO: ApiModelConfig(
+            params={"model": "granite-vision-4.1-4b"}
+        ),
         VlmEngineType.API_OLLAMA: ApiModelConfig(
-            params={"model": "granite3.3-vision:2b"}
+            params={"model": "granite-vision-4.1-4b"}
         ),
     },
 }
@@ -1164,7 +1167,7 @@ VLM_CONVERT_DEEPSEEK_OCR = StageModelPreset(
 VLM_CONVERT_GRANITE_VISION = StageModelPreset(
     preset_id="granite_vision",
     name="Granite-Vision",
-    description="IBM Granite Vision model for markdown conversion (2B parameters)",
+    description="IBM Granite Vision model for markdown conversion (4B parameters)",
     model_spec=VlmModelSpec(
         **GRANITE_VISION_MODEL_SPEC_BASE,
         prompt="Convert this page to markdown. Do not miss any text and only output the bare markdown!",
@@ -1850,8 +1853,8 @@ PICTURE_DESC_SMOLVLM = StageModelPreset(
 
 PICTURE_DESC_GRANITE_VISION = StageModelPreset(
     preset_id="granite_vision",
-    name="Granite-Vision-3.3-2B",
-    description="IBM Granite Vision model for detailed image descriptions (2B parameters)",
+    name="Granite-Vision-4.1-4B",
+    description="IBM Granite Vision model for detailed image descriptions (4B parameters)",
     model_spec=VlmModelSpec(
         **GRANITE_VISION_MODEL_SPEC_BASE,
         prompt="What is shown in this image?",
